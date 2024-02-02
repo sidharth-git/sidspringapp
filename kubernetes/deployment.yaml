@@ -1,0 +1,22 @@
+# kubernetes/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sidspringbootdeployment
+  namespace: devspring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sidspringboot
+  template:
+    metadata:
+      labels:
+        app: sidspringboot
+    spec:
+      containers:
+      - name: sidspringbootcontainer
+        image: localhost:5000/sidspringbootimage
+        ports:
+        - containerPort: 8085
+
