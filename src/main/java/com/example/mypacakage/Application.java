@@ -10,7 +10,7 @@ public class Application {
 	
 	@RequestMapping(value="/")
 	public String index() {
-		return"<h1>Hello world";
+		return"<h1>HI SIDHU BHAI, WELCOME TO YOUR KHATARNAK SPRINGBOOT APPLICATION";
 	}
 
 	public static void main(String[] args) {
