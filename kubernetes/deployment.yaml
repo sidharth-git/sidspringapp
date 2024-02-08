@@ -19,4 +19,11 @@ spec:
         image: localhost:5000/sidspringbootimage
         ports:
         - containerPort: 8085
+      # Add the token volume and volume mount here
+      serviceAccountName: my-service-account
+      volumes:
+      - name: secret-volume
+        secret:
+          secretName: my-service-account-token
+---
 
